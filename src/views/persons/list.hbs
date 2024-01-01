@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row mt-5">
+        {{#if persons}}
+            <table class="text-center table">
+                <thead>
+                    <tr class="table-dark">
+                        <th>Name</th>
+                        <th>Lastname</th>
+                        <th>Age</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each persons}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{lastname}}</td>
+                            <td>{{age}}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="/edit/{{id}}" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+                                    <a href="/delete/{{id}}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+                <tfoot>
+                    <tr class="table-dark">
+                        <td colspan="4">register the persons</td>
+                    </tr>
+                </tfoot>
+            </table>
+        {{else}}
+            <div class="card text-center mx-auto" style="width: 350px;">
+                <div class="card-header">
+                    <h3>you must create new person</h3>
+                </div>
+                <div class="card-body">
+                    <p>press this botton to register a person in the aplication</p>
+                    <a href="#" class="btn btn-primary">go to create</a>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</div>

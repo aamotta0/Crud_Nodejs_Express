@@ -1,0 +1,22 @@
+Start the project
+npm init --y
+
+Package
+npm i express express-handlebars morgan mysql2
+
+Execute the code manually
+node .\src\index.js
+
+________________________________________
+
+Execute the code Dependenci nodemon
+npm i nodemon -D
+
+package.json
+"type": "module",
+"dev": "nodemon ./src/index.js"
+
+console
+npm run dev
+
+________________________________________
